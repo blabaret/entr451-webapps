@@ -1,14 +1,14 @@
 <h1>Hello world! Tacos?! </h1>
 
 <%  
-    tacos = ["Carnitas","Al Pastor","Fish"]
+    tacos = ["Carnitas","Al Pastor","Fish","Pollo"]
 %>
 <!--- Tells Rails that this is ruby code (.erb means embedded ruby). Ruby code is never part of the response. -->
 
 <p>There are <%= tacos.count %> tacos.</p>
 
 <ul>
-    <li>Carnitas</li>
-    <li>Al Pastor</li>
-    <li>Fish</li>
+    <% for taco in tacos %>
+        <li><%= taco %></li>
+    <% end %>
 </ul>
